@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Mejishet - Catálogo</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menú superior -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../images/logo.png" alt="Logo Postres Mejishet">
+            <span>Postres Mejishet</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="catalogo.html" class="active">CATÁLOGO</a></li>
+            <li><a href="pedidos.html">PEDIDOS</a></li>
+            <li><a href="contactanos.html">CONTÁCTANOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="catalogo-container">
+        <h1 class="catalogo-title">Nuestros Postres</h1>
+        
+        <div class="productos-grid">
+            <!-- Producto 1: Queque de plátano -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="../images/products/platano.jpg" alt="Queque de plátano">
+                </div>
+                <div class="producto-info">
+                    <h2>Queque de plátano</h2>
+                    <p class="producto-desc">Delicioso queque hecho con plátanos naturales, esponjoso y dulce.</p>
+                    <div class="producto-precios">
+                        <p><span class="precio">Tajada: 3 Bs</span></p>
+                        <p><span class="precio">Entero: 20 Bs</span></p>
+                    </div>
+                    <button class="btn-pedido" onclick="agregarAlPedido('Queque de plátano', 20)">
+                        <i class="fas fa-shopping-cart"></i> Pedir Entero
+                    </button>
+                    <button class="btn-pedido secundario" onclick="agregarAlPedido('Queque de plátano (tajada)', 3)">
+                        <i class="fas fa-utensils"></i> Pedir Tajada
+                    </button>
+                </div>
+            </div>
+
+            <!-- Producto 2: Carlotas de limón -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="../images/products/carlotas.jpg" alt="Carlotas de limón">
+                </div>
+                <div class="producto-info">
+                    <h2>Carlotas de limón</h2>
+                    <p class="producto-desc">Postre refrescante con galletas y crema de limón, ideal para cualquier ocasión.</p>
+                    <div class="producto-precios">
+                        <p><span class="precio">Vaso: 5 Bs</span></p>
+                        <p><span class="precio">Docena: 50 Bs</span></p>
+                    </div>
+                    <button class="btn-pedido" onclick="agregarAlPedido('Carlotas de limón (docena)', 50)">
+                        <i class="fas fa-shopping-cart"></i> Pedir Docena
+                    </button>
+                    <button class="btn-pedido secundario" onclick="agregarAlPedido('Carlotas de limón (vaso)', 5)">
+                        <i class="fas fa-glass-whiskey"></i> Pedir Vaso
+                    </button>
+                </div>
+            </div>
+
+            <!-- Producto 3: Panqueques de vainilla -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="../images/products/panqueques.jpg" alt="Panqueques de vainilla">
+                </div>
+                <div class="producto-info">
+                    <h2>Panqueques de vainilla</h2>
+                    <p class="producto-desc">Esponjosos panqueques con esencia de vainilla, perfectos para el desayuno o merienda.</p>
+                    <div class="producto-precios">
+                        <p><span class="precio">Unidad: 2 Bs</span></p>
+                        <p><span class="precio">Par: 3 Bs</span></p>
+                    </div>
+                    <button class="btn-pedido" onclick="agregarAlPedido('Panqueques de vainilla (par)', 3)">
+                        <i class="fas fa-shopping-cart"></i> Pedir Par
+                    </button>
+                    <button class="btn-pedido secundario" onclick="agregarAlPedido('Panqueques de vainilla (unidad)', 2)">
+                        <i class="fas fa-cookie-bite"></i> Pedir Unidad
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="catalogo-nota">
+            <p>¡Todos nuestros postres son hechos con ingredientes frescos y mucho amor!</p>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Mi Proyecto Web</title>
-<link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Mejishet - Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<h1>¡Hola Mundo! 🎉</h1>
-<script src="js/main.js"></script>
+    <!-- Menú superior -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Postres Mejishet">
+            <span>Postres Mejishet</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">INICIO</a></li>
+            <li><a href="pages/catalogo.html">CATÁLOGO</a></li>
+            <li><a href="pages/pedidos.html">PEDIDOS</a></li>
+            <li><a href="pages/contactanos.html">CONTÁCTANOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal - EXACTAMENTE como en la imagen -->
+    <main class="inicio-container">
+        <!-- Imagen grande de postres -->
+        <section class="banner-section">
+            <img src="images/baner.jpg" alt="Postres deliciosos" class="banner-image">
+        </section>
+
+        <!-- Frase inspiradora debajo de la imagen -->
+        <section class="frase-section">
+            <div class="frase-box">
+                <h1>"MEJORAMOS CADA DÍA PARA HACER TU VIDA MÁS DULCE"</h1>
+            </div>
+        </section>
+
+        <!-- Sección de 3 características -->
+        <section class="caracteristicas-section">
+            <div class="caracteristicas-container">
+                <div class="caracteristica-item">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h2>MICRO</h2>
+                    <p>Entrega rápida</p>
+                </div>
+
+                <div class="caracteristica-item">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h2>CATÁLOGO</h2>
+                    <p>Variedad de postres</p>
+                </div>
+
+                <div class="caracteristica-item">
+                    <div class="caracteristica-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h2>PEDIDOS</h2>
+                    <p>Fáciles y seguros</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de información adicional -->
+        <section class="info-section">
+            <div class="info-card">
+                <h3><i class="fas fa-star"></i> Postres Frescos Todos los Días</h3>
+                <p>Elaboramos nuestros postres diariamente con ingredientes de la más alta calidad.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-heart"></i> Hechos con Amor</h3>
+                <p>Cada postre está preparado con dedicación y cariño para endulzar tu día.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-clock"></i> Entrega Rápida</h3>
+                <p>Recibe tus postres en la puerta de tu casa en menos de 2 horas.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página simple -->
+    <footer class="simple-footer">
+        <p>© 2025 Postres Mejishet - Todos los derechos reservados</p>
+        <p>+591 74005712 | extravendateng@mail.com</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
