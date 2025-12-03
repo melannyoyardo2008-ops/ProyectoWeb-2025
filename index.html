@@ -5,13 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postres Mejishet - Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Estilos adicionales para la imagen */
+        .imagen-principal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 30px 0;
+        }
+        
+        .imagen-principal img {
+            width: 85%;
+            max-width: 900px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 5px solid #ff6b8b;
+        }
+        
+        .frase-principal {
+            text-align: center;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: #fff9f0;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .frase-principal h1 {
+            color: #ff6b8b;
+            font-size: 2.2rem;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        /* Para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .imagen-principal img {
+                width: 95%;
+                height: 350px;
+            }
+            
+            .frase-principal h1 {
+                font-size: 1.5rem;
+            }
+            
+            .frase-principal {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Menú superior -->
     <nav class="navbar">
         <div class="logo">
             <img src="images/logo.png" alt="Logo Postres Mejishet">
-            <span>Postres Mejishet</span>
+            <span>Postres Melishet</span>
         </div>
         <ul class="nav-menu">
             <li><a href="index.html" class="active">INICIO</a></li>
@@ -23,9 +78,9 @@
 
     <!-- Contenido PRINCIPAL - SOLO IMAGEN Y FRASE -->
     <main class="inicio-simple">
-        <!-- Imagen grande de postres -->
+        <!-- Imagen grande de postres CENTRADA -->
         <div class="imagen-principal">
-            <img src="images/baner.jpg" alt="Postres deliciosos">
+            <img src="images/inicio.png" alt="Postres deliciosos">
         </div>
         
         <!-- Frase debajo de la imagen -->

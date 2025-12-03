@@ -6,6 +6,72 @@
     <title>Postres Mejishet - Catálogo</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos específicos para el catálogo */
+        .producto-imagen {
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f8f8;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .producto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .producto-card:hover .producto-imagen img {
+            transform: scale(1.05);
+        }
+        
+        /* Botones funcionales */
+        .btn-pedido {
+            background-color: #ff6b8b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        
+        .btn-pedido:hover {
+            background-color: #ff4a72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
+        }
+        
+        /* Botones amarillos */
+        .btn-pedido.secundario {
+            background-color: #ffb347 !important;
+            border: 2px solid #ffb347;
+        }
+        
+        .btn-pedido.secundario:hover {
+            background-color: #ff9d1e !important;
+            border-color: #ff9d1e;
+        }
+        
+        /* Para enlaces que son botones */
+        .btn-pedido.enlace {
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Menú superior -->
@@ -30,7 +96,7 @@
             <!-- Producto 1: Queque de plátano -->
             <div class="producto-card">
                 <div class="producto-imagen">
-                    <img src="../images/products/platano.jpg" alt="Queque de plátano">
+                    <img src="../images/productos/platano.jpg" alt="Queque de plátano">
                 </div>
                 <div class="producto-info">
                     <h2>Queque de plátano</h2>
@@ -39,19 +105,20 @@
                         <p><span class="precio">Tajada: 3 Bs</span></p>
                         <p><span class="precio">Entero: 20 Bs</span></p>
                     </div>
-                    <button class="btn-pedido" onclick="agregarAlPedido('Queque de plátano', 20)">
+                    <!-- Botones que redirigen a pedidos.html -->
+                    <a href="pedidos.html?producto=queque_entero&precio=20" class="btn-pedido enlace">
                         <i class="fas fa-shopping-cart"></i> Pedir Entero
-                    </button>
-                    <button class="btn-pedido secundario" onclick="agregarAlPedido('Queque de plátano (tajada)', 3)">
+                    </a>
+                    <a href="pedidos.html?producto=queque_tajada&precio=3" class="btn-pedido secundario enlace">
                         <i class="fas fa-utensils"></i> Pedir Tajada
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Producto 2: Carlotas de limón -->
             <div class="producto-card">
                 <div class="producto-imagen">
-                    <img src="../images/products/carlotas.jpg" alt="Carlotas de limón">
+                    <img src="../images/productos/carlotas.jpg" alt="Carlotas de limón">
                 </div>
                 <div class="producto-info">
                     <h2>Carlotas de limón</h2>
@@ -60,19 +127,20 @@
                         <p><span class="precio">Vaso: 5 Bs</span></p>
                         <p><span class="precio">Docena: 50 Bs</span></p>
                     </div>
-                    <button class="btn-pedido" onclick="agregarAlPedido('Carlotas de limón (docena)', 50)">
+                    <!-- Botones que redirigen a pedidos.html -->
+                    <a href="pedidos.html?producto=carlotas_docena&precio=50" class="btn-pedido enlace">
                         <i class="fas fa-shopping-cart"></i> Pedir Docena
-                    </button>
-                    <button class="btn-pedido secundario" onclick="agregarAlPedido('Carlotas de limón (vaso)', 5)">
+                    </a>
+                    <a href="pedidos.html?producto=carlotas_vaso&precio=5" class="btn-pedido secundario enlace">
                         <i class="fas fa-glass-whiskey"></i> Pedir Vaso
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Producto 3: Panqueques de vainilla -->
             <div class="producto-card">
                 <div class="producto-imagen">
-                    <img src="../images/products/panqueques.jpg" alt="Panqueques de vainilla">
+                    <img src="../images/productos/panqueques.jpg" alt="Panqueques de vainilla">
                 </div>
                 <div class="producto-info">
                     <h2>Panqueques de vainilla</h2>
@@ -81,21 +149,40 @@
                         <p><span class="precio">Unidad: 2 Bs</span></p>
                         <p><span class="precio">Par: 3 Bs</span></p>
                     </div>
-                    <button class="btn-pedido" onclick="agregarAlPedido('Panqueques de vainilla (par)', 3)">
+                    <!-- Botones que redirigen a pedidos.html -->
+                    <a href="pedidos.html?producto=panqueques_par&precio=3" class="btn-pedido enlace">
                         <i class="fas fa-shopping-cart"></i> Pedir Par
-                    </button>
-                    <button class="btn-pedido secundario" onclick="agregarAlPedido('Panqueques de vainilla (unidad)', 2)">
+                    </a>
+                    <a href="pedidos.html?producto=panqueques_unidad&precio=2" class="btn-pedido secundario enlace">
                         <i class="fas fa-cookie-bite"></i> Pedir Unidad
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
         
         <div class="catalogo-nota">
             <p>¡Todos nuestros postres son hechos con ingredientes frescos y mucho amor!</p>
+            <p><strong>Haz clic en cualquier botón para ir directo al formulario de pedidos.</strong></p>
         </div>
     </main>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Función para agregar al pedido (versión mejorada)
+        function agregarAlPedido(producto, precio) {
+            // Guardar en localStorage
+            localStorage.setItem('ultimoProducto', producto);
+            localStorage.setItem('ultimoPrecio', precio);
+            
+            // Redirigir a la página de pedidos
+            window.location.href = 'pedidos.html';
+        }
+        
+        // Función alternativa para botones como enlaces
+        function redirigirAPedidos(producto, precio) {
+            // Redirigir con parámetros en la URL
+            window.location.href = 'pedidos.html?producto=' + encodeURIComponent(producto) + '&precio=' + precio;
+        }
+    </script>
 </body>
 </html>
